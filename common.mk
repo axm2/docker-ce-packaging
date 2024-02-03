@@ -1,4 +1,4 @@
-ARCH=$(shell uname -m)
+ARCH=armel
 
 # These are the architecture formats as used in release-packaging Jenkinsfile
 # This is an ugly chimera, nobody uses this combination of dpkg and uname formats
@@ -46,7 +46,7 @@ DOCKER_BUILDX_REF  ?= v0.12.1
 VERIFY_PACKAGE_REPO ?= prod
 
 # Optional flags like --platform=linux/armhf
-VERIFY_PLATFORM ?=
+VERIFY_PLATFORM ?= --platform=linux/armel
 
 export BUILDTIME
 export DEFAULT_PRODUCT_LICENSE
